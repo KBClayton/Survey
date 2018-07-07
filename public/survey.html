@@ -19,7 +19,7 @@
             <div class="col-lg-10">
                 <form>
                     <h3>About You</h3><br>
-                    <div class="form-group">
+                    <div class="form-group" id="sform" onsubmit="openModal()">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Your name" required>
                     </div>
@@ -29,129 +29,131 @@
                     </div>
                     <h3>Questions</h3><br>
                     <div class="form-group">
-                      <label for="answer1">I am a morning person.</label>
-                      <select class="form-control" id="answer1" required>
-                        <option>1 Strongly Disagree</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 Strongly Agree</option>
-                      </select>
+                        <label for="answer1">I am a morning person.</label>
+                        <select class="form-control" id="answer1" required>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="answer2">Pineapple is a pizza topping.</label>
                         <select class="form-control" id="answer2" required>
-                          <option>1 Strongly Disagree</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5 Strongly Agree</option>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
                         </select>
                     </div>
                     <div class="form-group">
                     <label for="answer3">There is no cow level.</label>
-                    <select class="form-control" id="answer3" required>
-                        <option>1 Strongly Disagree</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 Strongly Agree</option>
-                    </select>
+                        <select class="form-control" id="answer3" required>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                    <label for="answer4">Puce is the best color.</label>
-                    <select class="form-control" id="answer4" required>
-                        <option>1 Strongly Disagree</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 Strongly Agree</option>
-                    </select>
+                        <label for="answer4">Puce is the best color.</label>
+                        <select class="form-control" id="answer4" required>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                    <label for="answer5">Oranges are apples.</label>
-                    <select class="form-control" id="answer5" required>
-                        <option>1 Strongly Disagree</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 Strongly Agree</option>
-                    </select>
+                        <label for="answer5">Oranges are apples.</label>
+                        <select class="form-control" id="answer5" required>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                    <label for="answer6">Whos on first.</label>
-                    <select class="form-control" id="answer6" required>
-                        <option>1 Strongly Disagree</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 Strongly Agree</option>
-                    </select>
+                        <label for="answer6">Whos on first.</label>
+                        <select class="form-control" id="answer6" required>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                    <label for="answer7">The middle option is best.</label>
-                    <select class="form-control" id="answer7" required>
-                        <option>1 Strongly Disagree</option>
-                        <option>2</option>
-                        <option>3 Strongly Agree</option>
-                        <option>4</option>
-                        <option>5 Strongly Disagree</option>
-                    </select>
+                        <label for="answer7">The middle option is best.</label>
+                        <select class="form-control" id="answer7" required>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3 Strongly Agree</option>
+                            <option>4</option>
+                            <option>5 Strongly Disagree</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                    <label for="answer8">The highest option is best.</label>
-                    <select class="form-control" id="answer8" required>
-                        <option>1 Strongly Disagree</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 Strongly Agree</option>
-                    </select>
+                        <label for="answer8">The highest option is best.</label>
+                        <select class="form-control" id="answer8" required>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                    <label for="answer9">The lowest option is best</label>
-                    <select class="form-control" id="answer9" required>
-                        <option>1 Strongly Agree</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 Strongly Disagree</option>
-                    </select>
+                        <label for="answer9">The lowest option is best</label>
+                        <select class="form-control" id="answer9" required>
+                            <option>1 Strongly Agree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Disagree</option>
+                        </select>
                     </div>
                     <div class="form-group">
                     <label for="answer10">Up is down.</label>
-                    <select class="form-control" id="answer10" required>
-                        <option>1 Strongly Disagree</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 Strongly Agree</option>
-                    </select>
+                        <select class="form-control" id="answer10" required>
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="thebutton" data-toggle="modal" data-target="#myModal">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="thebutton" >Submit</button>
                     <!-- data-toggle="modal" data-target="#myModal" -->
-                </form>
-            </div>
-        </div>
-    </div>
+                </form> 
+            </div> <!--  col-lg-10 -->
+        </div> <!--  row -->
+    </div> <!--  container -->
 
-    <div id="myModal" class="modal fade" role="dialog"  tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <!-- <div id="myModal" class="modal fade" role="dialog"  tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true"> -->
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <h4 class="modal-title">Your best friend match is:</h4>
-            </div>
-            <div class="modal-body">
-                <span id="mpic"></span><br>
-                <p><span id="mname"></span></p>
-            </div>
-            <div class="modal-footer">
-                <a href="/">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Return</button>
-                </a>
-            </div>
-            </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h4 class="modal-title">Your best friend match is:</h4>
+                </div> <!--  modal header -->
+                <div class="modal-body">
+                    <span id="mpic"></span><br>
+                    <p><span id="mname"></span></p>
+                </div> <!--  modal-body -->
+                <div class="modal-footer">
+                    <a href="/">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Return</button>
+                    </a>
+                </div> <!--  modal footer -->
+            </div> <!--  modal-content -->
         </div>
     </div>
 
@@ -161,7 +163,10 @@
  //   $( document ).ready(function() {
         //$('#myModal').modal({ show: false});
         $("#thebutton").on("click", function(event) {
+        //$("#sform").submit(function(event){
+            $('#myModal').modal('show');
             event.preventDefault();
+
             var person = {
                 name: $("#name").val().trim(),
                 image: $("#imagelink").val().trim(),
@@ -186,6 +191,8 @@
                 console.log(data.name);
                 $("#mpic").html("<img src='"+data.image+"' with=200 height=200>");
                 $("#mname").html(data.name);
+
+                
                 alert("Your best match is "+data.name);
                 //jQuery('#myModal').modal("show");
                 //$('#myModal').modal('show');

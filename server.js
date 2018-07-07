@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var homepath= __dirname;
-//var apipath=require("./routing/apiRoutes.js");
+//var apipath=require("./routing/apiRouts.js");
 var htmlpath=require("./routing/htmlRouts.js");
 var people=require("./app/data/friends.js");
 //console.log( __dirname);
@@ -74,7 +74,7 @@ app.post("/api/people", function(req, res) {
     res.json(people[indexer]);
 });
 
-//app.use('/api', apipath);
+//app.use('/api/people', apipath);
 app.use('/', htmlpath);
 app.use('/survey', htmlpath);
 

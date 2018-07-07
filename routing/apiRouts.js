@@ -2,9 +2,7 @@ var express = require('express');
 var bodyParser = require("body-parser");
 var path = require("path");
 var people=require("../app/data/friends.js");
-var indexer=0;
-var diff=0;
-var outsidediff=5000;
+
 
 // app.get("/api/people", function(req, res) {
 //     return res.json(people);
@@ -36,6 +34,10 @@ var outsidediff=5000;
 
 module.exports = (function() {
     'use strict';
+    var indexer=0;
+    var diff=0;
+    var outsidediff=5000;
+    console.log("in apiroutes");   
     var api = express.Router();
     api.use(bodyParser.urlencoded({ extended: true }));
     api.use(bodyParser.json());
@@ -43,12 +45,13 @@ module.exports = (function() {
 
 
     api.get("/api/people", function(req, res) {
-        res.send( res.json(people));
+        console.log("in get");
+         res.json(people);
     });
     
     api.post("/api/people", function(req, res) {
         var newpeople= req.body;
-    
+        console.log("in post");
         for(var i=0; i<10; i++){
             newpeople.answers[i]=parseInt(newpeople.answers[i]);
         }
@@ -65,7 +68,7 @@ module.exports = (function() {
             console.log("Outsidediff is: "+outsidediff+" indexer is: "+indexer);
         }
         people.push(newpeople);
-        res.send(res.json(people[indexer]));
+        res.json(people[indexer]);
     });
     return api;
 })();
