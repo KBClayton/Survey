@@ -2,7 +2,7 @@
   "name": "survey",
   "version": "1.0.0",
   "description": "A simple survey to match compatablility using a node server.",
-  "main": "server.js",
+  "main": "./routing/htmlRoutes.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
