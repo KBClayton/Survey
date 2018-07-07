@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <title>Friend Finder</title>
 </head>
 <body>
     <div class="jumbotron" id="topthing">
            <h1>Survey Questions</h1>
-
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-10">
@@ -128,17 +128,18 @@
                         <option>5 Strongly Agree</option>
                     </select>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="thebutton">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="thebutton" data-toggle="modal" data-target="#myModal">Submit</button>
                     <!-- data-toggle="modal" data-target="#myModal" -->
                 </form>
             </div>
         </div>
     </div>
-    <div id="myModal" class="modal fade" role="dialog"  tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+
+        <div id="myModal" class="modal fade" role="dialog"  tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <h4 class="modal-title">Your best friend match is:</h4>
                 </div>
                 <div class="modal-body">
@@ -151,13 +152,31 @@
                     </a>
                 </div>
               </div>
-          
+            </div>
         </div>
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 <script>
 
-    $( document ).ready(function() {
+ //   $( document ).ready(function() {
         //$('#myModal').modal({ show: false});
         $("#thebutton").on("click", function(event) {
             event.preventDefault();
@@ -181,6 +200,8 @@
 
             $.post("/api/people", person).then(function(data) {
                 console.log(data);
+                console.log(data.image);
+                console.log(data.name);
                 $("#mpic").html("<img src='"+data.image+"' with=200 height=200>");
                 $("#mname").html(data.name);
                 //jQuery('#myModal').modal("show");
@@ -200,5 +221,5 @@
                 //$("#topthing").append(newdiv);
             });
         });
-    });
+ //   });
 </script>

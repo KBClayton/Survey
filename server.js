@@ -1,10 +1,12 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-//var apipath=require("./paths/apiRoutes.js");
-//var htmlpath=require("./paths/htmlRouts.js");
-//var peopledata=require("./app/data/friends.js")
-
+var homepath= __dirname;
+//var apipath=require("./routing/apiRoutes.js");
+var htmlpath=require("./routing/htmlRouts.js");
+//var people=require("./app/data/friends.js");
+//console.log( __dirname);
+//console.log(people);
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -21,6 +23,21 @@ var people = [
       name: "test1",
       image: "http://via.placeholder.com/200x200",
       answers:[1,2,3,4,5,1,2,3,4,5]
+    },
+    {
+        name: "test2",
+        image: "http://via.placeholder.com/200x200",
+        answers:[1,1,1,1,1,1,1,1,1,1]
+    },
+    {
+        name: "test3",
+        image: "http://via.placeholder.com/200x200",
+        answers:[3,3,3,3,3,3,3,3,3,3]
+    },
+    {
+        name: "test4",
+        image: "http://via.placeholder.com/200x200",
+        answers:[5,5,5,5,5,5,5,5,5,5]
     },
 ];
 
@@ -56,6 +73,14 @@ app.post("/api/people", function(req, res) {
     people.push(newpeople);
     res.json(people[indexer]);
 });
+
+// app.use('/api', apipath);
+app.use('/', htmlpath);
+app.use('/survey', htmlpath);
+
+
+
+
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
