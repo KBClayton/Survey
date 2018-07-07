@@ -4,7 +4,7 @@ var path = require("path");
 var homepath= __dirname;
 //var apipath=require("./routing/apiRoutes.js");
 var htmlpath=require("./routing/htmlRouts.js");
-//var people=require("./app/data/friends.js");
+var people=require("./app/data/friends.js");
 //console.log( __dirname);
 //console.log(people);
 var app = express();
@@ -18,35 +18,35 @@ var indexer=0;
 var diff=0;
 var outsidediff=5000;
 
-var people = [
-    {
-      name: "test1",
-      image: "http://via.placeholder.com/200x200",
-      answers:[1,2,3,4,5,1,2,3,4,5]
-    },
-    {
-        name: "test2",
-        image: "http://via.placeholder.com/200x200",
-        answers:[1,1,1,1,1,1,1,1,1,1]
-    },
-    {
-        name: "test3",
-        image: "http://via.placeholder.com/200x200",
-        answers:[3,3,3,3,3,3,3,3,3,3]
-    },
-    {
-        name: "test4",
-        image: "http://via.placeholder.com/200x200",
-        answers:[5,5,5,5,5,5,5,5,5,5]
-    },
-];
+// var people = [
+//     {
+//       name: "test1",
+//       image: "http://via.placeholder.com/200x200",
+//       answers:[1,2,3,4,5,1,2,3,4,5]
+//     },
+//     {
+//         name: "test2",
+//         image: "http://via.placeholder.com/200x200",
+//         answers:[1,1,1,1,1,1,1,1,1,1]
+//     },
+//     {
+//         name: "test3",
+//         image: "http://via.placeholder.com/200x200",
+//         answers:[3,3,3,3,3,3,3,3,3,3]
+//     },
+//     {
+//         name: "test4",
+//         image: "http://via.placeholder.com/200x200",
+//         answers:[5,5,5,5,5,5,5,5,5,5]
+//     },
+// ];
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "/public/home.html"));
-});
-app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "/public/survey.html"));
-});
+// app.get("/", function(req, res) {
+//     res.sendFile(path.join(__dirname, "/public/home.html"));
+// });
+// app.get("/survey", function(req, res) {
+//     res.sendFile(path.join(__dirname, "/public/survey.html"));
+// });
 
 app.get("/api/people", function(req, res) {
     return res.json(people);
@@ -74,7 +74,7 @@ app.post("/api/people", function(req, res) {
     res.json(people[indexer]);
 });
 
-// app.use('/api', apipath);
+//app.use('/api', apipath);
 app.use('/', htmlpath);
 app.use('/survey', htmlpath);
 

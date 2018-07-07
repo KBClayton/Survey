@@ -135,43 +135,25 @@
         </div>
     </div>
 
-        <div id="myModal" class="modal fade" role="dialog"  tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <h4 class="modal-title">Your best friend match is:</h4>
-                </div>
-                <div class="modal-body">
-                    <span id="mpic"></span><br>
-                  <p><span id="mname"></span></p>
-                </div>
-                <div class="modal-footer">
-                    <a href="/">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Return</button>
-                    </a>
-                </div>
-              </div>
+    <div id="myModal" class="modal fade" role="dialog"  tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h4 class="modal-title">Your best friend match is:</h4>
+            </div>
+            <div class="modal-body">
+                <span id="mpic"></span><br>
+                <p><span id="mname"></span></p>
+            </div>
+            <div class="modal-footer">
+                <a href="/">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Return</button>
+                </a>
+            </div>
             </div>
         </div>
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 <script>
@@ -204,6 +186,7 @@
                 console.log(data.name);
                 $("#mpic").html("<img src='"+data.image+"' with=200 height=200>");
                 $("#mname").html(data.name);
+                alert("Your best match is "+data.name);
                 //jQuery('#myModal').modal("show");
                 //$('#myModal').modal('show');
                 //$('#myModal').modal('show');
